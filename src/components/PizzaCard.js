@@ -43,7 +43,7 @@ function PizzaCard({ name, imageUrl, price, types, sizes }) {
               onClick={() => onSelectSize(index)}
               className={classNames({
                 active: activeSize === index,
-                disabled: !sizes.includes(index),
+                disabled: !sizes.includes(size),
               })}
             >
               {size} см.
@@ -83,7 +83,7 @@ PizzaCard.propTypes = {
 };
 
 PizzaCard.defaultProps = {
-  name: '---',
+  name: "---",
   price: 0,
   types: [],
   sizes: [],
