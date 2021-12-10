@@ -1,7 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Categories, SortPopup, PizzaCard } from "./../components";
+import {
+    Categories,
+    SortPopup,
+    PizzaCard,
+    PizzaLoading,
+} from "./../components";
 import { setCategory } from "./../redux/actions/filters";
 
 const categoryNames = [
@@ -19,6 +24,7 @@ const sorts = [
 
 function Home() {
     const items = useSelector((state) => state.pizzas.items);
+    const isLoading = useSelector((state) => state.pizzas.isLoaded);
     const dispatch = useDispatch();
 
     const onSelectCategory = React.useCallback((index) => {
@@ -36,9 +42,11 @@ function Home() {
             </div>
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
-                {items.map((item) => (
-                    <PizzaCard key={item.id} {...item} />
-                ))}
+                {isLoading
+                    ? items.map((item) => <PizzaCard key={item.id} {...item} />)
+                    : [...Array(12)].map((item, index) => <PizzaLoading key={index} />)
+                    
+                }
             </div>
         </div>
     );
