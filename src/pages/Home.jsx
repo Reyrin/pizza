@@ -18,11 +18,12 @@ const categoryNames = [
     "Острые",
     "Сладкие",
 ];
+
 const sorts = [
-    { name: "популярности", type: "popular" },
-    { name: "цене", type: "price" },
-    { name: "алфавиту", type: "alphabet" },
-];
+    { name: 'популярности', type: 'rating', order: 'desc' },
+    { name: 'цене', type: 'price', order: 'desc' },
+    { name: 'алфавит', type: 'name', order: 'asc' },
+  ];
 
 function Home() {
     const dispatch = useDispatch();
@@ -38,8 +39,8 @@ function Home() {
         dispatch(setCategory(index));
     }, []);
 
-    const onSelectSortBy = React.useCallback((index) => {
-        dispatch(setSortBy(index));
+    const onSelectSortBy = React.useCallback((type) => {
+        dispatch(setSortBy(type));
     }, []);
 
     return (
@@ -47,7 +48,7 @@ function Home() {
             <div className="content__top">
                 <Categories
                     items={categoryNames}
-                    onClickItem={onSelectCategory}
+                    onClickCategory={onSelectCategory}
                     activeCategory={category}
                 />
                 <SortPopup items={sorts} onClickItem={onSelectSortBy} activeItem={sortBy.type} />
