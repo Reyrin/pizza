@@ -66,14 +66,14 @@ function Home() {
             <h2 className="content__title">Все пиццы</h2>
             <div className="content__items">
                 {isLoading
-                    ? items.map((item) => (
+                    ? items.map((obj) => (
                           <PizzaCard
                               onClickAddPizza={onAddtoCart}
-                              key={item.id}
-                              {...item}
+                              key={obj.id}
+                              {...obj}
                               addedCount={
-                                  cartItems[item.id] &&
-                                  cartItems[item.id].length
+                                  cartItems[obj.id] &&
+                                  cartItems[obj.id].items.length
                               }
                           />
                       ))

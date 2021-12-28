@@ -114,6 +114,15 @@ body {
     padding-top: 30px;
     margin-top: 30px;
 
+    button[disabled] {
+        opacity: 0.5;
+        transform: none;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+
     &-img {
       display: flex;
       align-items: center;
