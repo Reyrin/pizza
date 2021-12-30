@@ -1,0 +1,149 @@
+@media (max-width: 1280px) {
+    .container {
+        width: 95%;
+    }
+
+    .content {
+        &__top {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    .sort {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 930px) {
+    .content {
+        padding: 10px 0;
+    }
+
+    .categories {
+        ul {
+            justify-content: center;
+        }
+
+        ul li {
+            flex-basis: 30%;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px;
+    }
+    .wrapper {
+        width: calc(100vw - 40px);
+    }
+
+    .categories {
+        ul li {
+            flex-grow: 1;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .categories {
+        ul li {
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+    }
+
+    .cart {
+        padding-top: 15px;
+        margin-top: 15px;
+
+        &__item {
+            flex-wrap: wrap;
+        }
+
+        &__item-remove {
+            order: -1;
+            flex-basis: 100%;
+        }
+        
+        &__item-img {
+            flex-basis: 20%;
+        }
+        
+        &__item-info {
+            flex-basis: 65%;
+        }
+        
+        &__item-count {
+            flex-basis: 25%;
+            margin-top: 20px;
+        }
+        
+        &__item-price {
+            flex-basis: 65%;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .wrapper {
+        width: calc(100vw - 30px);
+    }
+
+    body {
+        padding-top: 15px;
+    }
+    
+
+    .header {
+        padding: 20px 0;
+
+        .container {
+            flex-direction: column;
+        }
+
+        &__cart {
+            margin-top: 20px;
+        }
+    }
+
+    .container--cart {
+        margin: 20px auto;
+    }
+
+    .cart--empty img {
+        width: 250px;
+    }
+
+    .cart {
+        &__bottom-details {
+            flex-direction: column;
+
+            span {
+                margin-top: 10px;
+            }
+        }
+
+        &__bottom-buttons {
+            flex-direction: column;
+            align-items: center;
+
+            .pay-btn {
+                order: -1;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__top {
+            flex-direction: column;
+    
+            .content__title {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
