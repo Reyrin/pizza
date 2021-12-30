@@ -2,6 +2,8 @@
 
 ![pizza](https://user-images.githubusercontent.com/51198976/147714487-a66e900d-639d-4962-91bc-06015645f715.png)
 
+### Demo - https://reyrin-pizza-store.herokuapp.com/
+
 ## Stack:
 1. React
 2. Redux
