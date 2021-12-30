@@ -1,8 +1,6 @@
 # 🍕 pizza-store
 
-![react-store](https://user-images.githubusercontent.com/51198976/131197707-61a2be28-fd02-4cd4-b766-1e7d077d2d40.png)
-
-
+![pizza](https://user-images.githubusercontent.com/51198976/147714487-a66e900d-639d-4962-91bc-06015645f715.png)
 
 ## Stack:
 1. React
